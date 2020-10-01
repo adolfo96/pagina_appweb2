@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>animacion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="estilos/estilo1.css">
+</head>
+<body>
+<section>
+	<header> <img src="D:\mincho\html\imagenes/cabecera.png" width="90%">  </header>
+
+	<nav>  
+
+		<ul>
+			<li> <a href="pagina24.html"> inicio </a>  </li>
+			<li> <a href="pagina26_sombras.html"> Sombras </a>  </li>
+			<li> <a href="pagina28_formulario.html"> formulario </a></li>
+			<li> <a href="pagina29_visitas.html"> visitas a mi pagina </a></li>
+			<li> <a href="pagina27_audio.html"> audio </a></li>
+			<li> <a href="pagina30_video.html"> video </a></li>
+			<li> <a href="pagina31_favicon.html"> favicon </a></li>
+            <li> <a href="pagina32_columnas.html"> columnas de texto </a></li>
+            <li> <a href="pagina34_contenido editable.html"> contenido editable </a></li>
+            <li> <a href="pagina35_animacion.html"> animacion </a></li>
+		</ul>
+    </nav>
+	
+	
+
+
+	<p><h1>Animation</h1>
+De una manera parecida a las transiciones, pero con una mayor potencialidad, en HTML5 tenemos a nuestra disposición las animaciones (animation).
+
+Para empezar con algo sencillo, primero vamos a hacer paso a paso que el martillo (creado en SVG) -y que ya hemos utilizado en otros temas- gire al colocar el cursor encima.
+Sitúa el cursor encima del martillo para ver la animación.</p>
+<p>1. Creamos el objeto a animar
+Primero, creamos dentro de un < div> el objeto, imagen o texto que realizará la animación (en este caso, el martillo).
+Así, dentro de la página html, creamos un < div> llamado martillo y dentro creamos un dibujo SVG del martillo que rotará.
+<pre>< div id="martillo">
+  < svg width="120" height="190" xmlns="http://www.w3.org/2000/svg")>
+    < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+    < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+    < rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661"/>
+    < rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F"/>
+    < rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982"/>
+    < rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6"/>
+    < rect x="43" y="67" width="14" height="9" fill="#482907"/>
+  < /svg>
+< /div></pre></p>
+
+    <div id="martillo">
+  <svg width="160" height="230" xmlns="http://www.w3.org/2000/svg")>
+    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111"/>
+    <rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661"/>
+    <rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F"/>
+    <rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982"/>
+    <rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6"/>
+    <rect x="43" y="67" width="14" height="9" fill="#482907"/>
+  </svg>
+</div>
+
+<p>
+	
+  <pre>
+	2. Establecemos la animación
+Seguidamente, en el código CSS, vamos a incluir dos cosas.
+Por una parte, en el selector del < div> donde está el martillo, indicamos qué animación tendrá que reproducir, indicando un nombre y la duración de la animación expresada en segundos (entre otras propiedades opcionales que a continuación veremos). 
+#martillo {
+  animation:animacion_martillo 2s;
+}
+ El nombre de la animación (animación_martillo) y la duración (2s) son valores obligatorios, pero existen valores opcionales que nos permiten personalizar la animación, como son:
+animation-timing-function : Define el tipo de (easing) aceleración que tendrá la animación.
+linear: la velocidad es siempre la misma durante toda la animación.
+ease: la animación comienza lenta, después rápida y acaba lento.
+ease-in: (aceleración) la animación empieza lenta y va acelerándose progresivamente.
+ease-out: (deceleración) la animación empieza rápida y va decelerando progresivamente.
+ease-in-out: la animación empieza y acaba lenta y en el recorrido central va rápida.
+
+animation-iteration-count: Indica el número de veces que se repetirá la animación.
+infinite: la animación se repite indefinidamente.
+número de repeticiones: se repite el número de veces indicado (por defecto es 1).
+
+animation-direction: Establece la dirección de la animación.
+normal: la animación se reproduce siempre tal y como la hemos definido.
+alternate: primero se reproduce en la dirección definida y posteriormente al revés (y así sucesivamente).
+
+animation-delay: Indica si existe retardo (o tiempo de espera) para que se inicie la animación.
+número de segundos de espera: El número de segundos seguido de "s".
+
+animation-fill-mode: Indica cómo se quedará el elemento que realiza la animación cuándo ésta finalice.
+none: Al acabar la animación se aplicarán los estilos CSS normales que tenga el propio elemento animado.
+forwards: Cuando acabe la animación, el elemento se quedará tal y como acabó la animación (especificadas en el 100%).
+backwards : Al finalizar la animación, el elemento animado se quedará con las propiedades con las que empezó la animación (especificadas en el 0%).
+
+Así, el ejemplo anterior podría estar complementado por estas propiedades:
+(Se podría escribir todo seguido, pero debido al número de valores y al orden existente para definirlos, posiblemente es más sencillo ir indicando las propiedades opcionales por separado): 
+#martillo {
+  animation:animacion_martillo 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 1s; 
+}
+  </pre>
+</p>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title> Tutorial HTML5 6 css3  </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="estilos/estilo1.css">
+
+</head>
+
+<body>
+	<header> <img src="D:\mincho\html\imagenes/cabecera.png" width="90%">  </header>
+
+	<nav>  
+
+		<ul>
+			<li> <a href="pagina24.html"> inicio </a>  </li>
+			<li> <a href="pagina26_sombras.html"> Sombras </a>  </li>
+			<li> <a href="pagina28_formulario.html"> formulario </a></li>
+			<li> <a href="pagina29_visitas.html"> visitas a mi pagina </a></li>
+			<li> <a href="pagina27_audio.html"> audio </a></li>
+			<li> <a href="pagina30_video.html"> video </a></li>
+			<li> <a href="pagina31_favicon.html"> favicon </a></li>
+			<li> <a href="pagina32_columnas.html"> columnas de texto </a></li>
+			<li> <a href="pagina34_contenido editable.html"> contenido editable </a></li>
+			<li> <a href="pagina35_animacion.html"> animacion </a></li>
+
+		</ul>
+		</ul>
+    </nav>
+	<section id="contingut">	
+
+
+<p id="punto1"></p>
+<div id="titulillo"><h2>Diferentes estándares de audio</h2></div>
+
+Para utilizar audio en HTML5 sin usar plugins externos ocurre algo parecido que con el vídeo. Existen diferentes formatos de audio y desgraciadamente no existe ninguno que funcione perfectamente en todos los navegadores, por lo que al menos tendremos que utilizar dos formatos para poder abarcarlos a todos.<br><br>
+Estos 2 formatos de audio mayoritarios son:<br><br>
+
+	<div id="celda1">
+		
+			El formato <b>MP3</b> (ficheros con extensión .mp3) abarca a la mayoría de navegadores, excepto a FireFox. Aunque está ampliamente arraigado, está sujeto a patentes.
+	</div>
+
+	<div id="celda1">
+		
+			El formato <b>OGG Vorbis</b> (ficheros con extensión .ogg) no está sujeto a patentes (igual que ocurre en el caso del vídeo). No es aceptado por Internet Explorer ni por Safari.
+	</div><br>
+
+
+		<br>
+ 
+
+	
+	
+	
+
+<p id="punto2"></p>
+
+
+<div id="titulillo"><h2>Ejemplo práctico</h2></div>
+
+Si queremos que el audio se pueda escuchar desde cualquier navegador (que soporte HTML5), tenemos que añadir a este código más posibilidades y por lo tanto tenemos que tener el audio grabado al menos en formato mp3 y ogg. Por lo que el código completo quedaría así:<br>
+<div class="codigo">
+	<pre>
+&lt;audio controls&gt;
+   &lt;source src="audio.mp3" type="audio/mpeg"/&gt;
+   &lt;source src="audio.ogg" type="audio/ogg"/&gt;
+&lt;/audio&gt;
+</pre>
+</div>
+</div><br>
+En este ejemplo se han utilizado los atributos de <b>'autoplay'</b> (para que escuches el audio cuando entres en esta página) y <b>'controls'</b> (para mostrar la barra de controles).<br><br>
+<br>
+<div id="video">
+	<audio controls autoplay>
+		<source src="audios/voz.mp3" type="audio/mpeg" />	
+	  <source src="audios/voz.ogg" type="audio/ogg" />
+	  <p>Tu navegador no soporta audio HTML5</p>
+	</audio>
+    <p>
+    <h2> como  agregar un  video  a  tu  pagina web </h2>
+        <p>para  insertar un  video  en  tu  plataforma  web debes  tener  en  cuenta  el  siguiente  codigo html teniendo  en  cuenta que el  video este guardado  en la misma carpeta que  tu  pagina  web   </p>
+        <div id="ca">
+        <img src="imagenes/imgVideo.jpg">
+        </div>
+        <p>ya que los atributos  van  en  el  css como  el  ancho,laro,la reproduccion automatica entre  otros</p>
+	<video src="audios/avianca.mp4" controls="automatica"> </video>
+
+
+
+</section>
+	<aside>
+		
+	</aside>
+	<footer></footer>
+
+
+			
+	
+
+	
+
+</body>
+</html>
